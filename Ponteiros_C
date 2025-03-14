@@ -4,11 +4,12 @@
 
 int main(){
 
-    char nome = 'f';
+    char letra = 'f';
     char *p; // ao criar ponteiro;
 
-    p = &nome; // ponteiro só recebe o enderço da variável
+    p = &letra; // ponteiro só recebe o enderço da variável
 
-    // 
+    prinft("Valor da letra: %c\n", letra);
+
 
 }
