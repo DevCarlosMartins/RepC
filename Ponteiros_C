@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+//
+
+int main(){
+
+    char nome = 'f';
+    char *p; // ao criar ponteiro;
+
+    p = &nome; // ponteiro só recebe o enderço da variável
+
+    // 
+
+}
