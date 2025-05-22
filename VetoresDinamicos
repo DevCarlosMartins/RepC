@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+
+// Vetores Dinamicos 
+//  \> Pilhas 
+
+
+typedef struct No{
+    int dado;
+    No *proximo;
+} No;
+
+
+typedef struct Pilha{
+	No *topo; 
+}Pilha;
+    
+void inicializar(Pilha *pilha){
+	pilha -> topo = NULL; 
+}
+
+// truu - Pilha vazia
+// False - Pilha não vazia
+bool estaVazia(Pilha *pilha){
+	return pilha->topo == NULL;
+}
+    
+    
+void empilhar(int dado, Pilha *pilha){
+	No *novo = (No *) malloc(sizeof(No));
+	novo->dado = dado;
+	novo->proximo = pilha->topo;
+	pilha->topo = novo;
+}
+    
+    
+int main()
+{
+    Pilha p1;
+    inicializar(&p1);
+    
+    empilhar(5,&p1);
+	   
+    if(estaVazia(&p1)){
+    	printf("Pilha Vazia");
+	}else{
+		printf("Tem caroço nesse Angu");
+	}
+    
+}
